@@ -94,12 +94,13 @@ class ImageMgr{
 	loadImageFromIdiom( idiom, callback ){
 		var query = idiom.replace(" ", "+");
 		this.flickr.search({
-			text: query
+			text: query,
+			content_type: 1
 		}, function(error, response){
 			if(error) return console.error(error);
 			// if not an error, get to work..
 			var photos = response.photos.photo; 
-			var length = photos.length;
+			var length = photos.length-1;
 			var photo = photos[Math.round(Math.random()*length)];
       var imagePath = "https://farm" + photo.farm + ".static.flickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
       var flickrImageURL = "https://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
@@ -153,7 +154,7 @@ class Application{
 		});
 
 		this.imageMgr.loadImageFromIdiom(idiom, (imagePath) => {
-			console.log(imagePath);
+			// console.log(imagePath);
 			$("body").css({
 				"background-image":  "url("+imagePath+")"
 			})
