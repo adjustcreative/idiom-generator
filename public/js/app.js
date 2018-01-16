@@ -107,8 +107,8 @@ class ImageMgr{
 
 			var photo = photos[Math.round(Math.random()*length)];
 
-      var imagePath = "http://farm" + photo.farm + ".static.flickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
-      var flickrImageURL = "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
+      var imagePath = "https://farm" + photo.farm + ".static.flickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
+      var flickrImageURL = "https://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
 
 
       callback.call(this, imagePath);
