@@ -41,6 +41,11 @@ body,html{
     font-size: 50px;
   }
 }
+@media(max-height:500px){
+  #idiom{
+    font-size: 50px;
+  }
+}
 
 #adjust{
   text-transform: uppercase;
