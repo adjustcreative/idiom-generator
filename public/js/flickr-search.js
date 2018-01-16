@@ -2,7 +2,7 @@
 
 	// Default configuration
 	var defaultConfig = {
-		api_uri: 'http://api.flickr.com/services/rest/',
+		api_uri: 'https://api.flickr.com/services/rest/',
 		api_key: null
 	};
 
